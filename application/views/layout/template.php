@@ -34,6 +34,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <script src='bower_components/textAngular/dist/textAngular-rangy.min.js'></script>
     <script src='bower_components/textAngular/dist/textAngular-sanitize.min.js'></script>
     <script src='bower_components/textAngular/dist/textAngular.min.js'></script>
+    <script src="bower_components/js/ui-bootstrap/ui-bootstrap-tpls-1.2.5.min.js"></script>
     <script src="bower_components/js/app.js"></script>
   </body>
 </html>

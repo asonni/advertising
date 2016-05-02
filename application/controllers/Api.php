@@ -10,7 +10,9 @@ class Api extends REST_Controller
     parent::__construct();
   }
   public function getAllAds_post(){
-    $result = $this->Main_model->getAllAds();
+    $pageSize = $this->uri->segment(3);
+    $currentPage = $this->uri->segment(4);
+    $result = $this->Main_model->getAllAds($pageSize,$currentPage);
     $this->response($result);
   }
   public function addNewAd_post(){
@@ -21,6 +23,11 @@ class Api extends REST_Controller
   public function getAdByID_post(){
     $id = $this->post('id');
     $result = $this->Main_model->getAdByID($id);
+    $this->response($result);
+  }
+  public function searchAdsByName_post(){
+    $ads_name = $this->post('ads_name');
+    $result = $this->Main_model->searchInAllAdsByName($ads_name);
     $this->response($result);
   }
 }
