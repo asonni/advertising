@@ -17,4 +17,7 @@ class Home extends CI_Controller {
   public function readMore(){
   	$this->load->view('readMore');
   }
+  public function editAd(){
+    $this->load->view('editAd');
+  }
 }

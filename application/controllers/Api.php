@@ -30,4 +30,10 @@ class Api extends REST_Controller
     $result = $this->Main_model->searchInAllAdsByName($ads_name);
     $this->response($result);
   }
+  public function editAd_post(){
+    $id = $this->uri->segment(3);
+    $data = $this->post('editAdForm');
+    $result = $this->Main_model->editAd($id,$data);
+    $this->response($result);
+  }
 }

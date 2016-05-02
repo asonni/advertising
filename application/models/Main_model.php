@@ -29,4 +29,9 @@ class Main_model extends CI_Model{
     $query = $this->db->get();
     return $query->result();
   }
+  public function editAd($id,$data){
+    $this->db->where('id', $id);
+    $query = $this->db->update('posts', $data);
+    return $query;
+  }
 }

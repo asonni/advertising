@@ -4,13 +4,16 @@
       <div class="col-xs-12 col-lg-2">
         <h3 class="panel-title">عرض الاعلانات</h3>
       </div>
-      <div class="col-xs-9 col-lg-9">
+      <div class="col-xs-9 col-lg-8">
         <div class="input-group">
-          <input type="text" class="form-control" ng-model="searchName" ng-change="searchByName()" placeholder="بحث..." style="line-height:25px;">
+          <input type="text" class="form-control input-sm" ng-model="searchName" ng-change="searchByName()" placeholder="بحث..." style="line-height:25px;">
           <div class="input-group-btn">
-            <button class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+            <button class="btn btn-default btn-sm"><i class="glyphicon glyphicon-search"></i></button>
           </div>
         </div>
+      </div>
+      <div class="col-xs-3 col-lg-2 text-left">
+        <a class="btn btn-success btn-sm" ui-sref="newAd"><em class="fa fa-plus fa-fw"></em>&nbsp;اعلان جديد</a>
       </div>
     </div>
   </div>
@@ -35,10 +38,12 @@
       <tbody>
         <tr ng-repeat="post in posts">
           <th width="5%" class="text-center">{{post.id}}</th>
-          <td width="70%">{{post.ads_name}}</td>
+          <td width="55%">{{post.ads_name}}</td>
           <td width="15%" class="text-center">{{post.ads_date}}</td> 
-          <td width="10%" class="text-center">
+          <td width="25%" class="text-center">
             <a class="btn btn-info btn-sm" ui-sref="readMore({id:post.id})"><em class="fa fa-info fa-fw"></em>&nbsp;قراءة المزيد</a>
+            <a class="btn btn-warning btn-sm" ui-sref="editAd({id:post.id})"><em class="fa fa-pencil fa-fw"></em>&nbsp;تعديل</a>
+            <a class="btn btn-danger btn-sm" ui-sref="editAd({id:post.id})"><em class="fa fa-trash fa-fw"></em>&nbsp;حذف</a>
           </td>
         </tr> 
       </tbody> 
