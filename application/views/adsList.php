@@ -38,7 +38,7 @@
           <td width="70%">{{post.ads_name}}</td>
           <td width="15%" class="text-center">{{post.ads_date}}</td> 
           <td width="10%" class="text-center">
-            <a class="btn btn-info btn-sm" ui-sref="showDesc({id:post.id})"><em class="fa fa-info fa-fw"></em>&nbsp;قراءة المزيد</a>
+            <a class="btn btn-info btn-sm" ui-sref="readMore({id:post.id})"><em class="fa fa-info fa-fw"></em>&nbsp;قراءة المزيد</a>
           </td>
         </tr> 
       </tbody> 

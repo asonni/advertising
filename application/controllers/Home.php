@@ -8,13 +8,13 @@ class Home extends CI_Controller {
   public function index(){
     $this->load->view('layout/template');
   }
-  public function advertinigList(){
+  public function adsList(){
     $this->load->view('adsList');
   }
-  public function add_ad(){
-    $this->load->view('add_ad');
+  public function newAd(){
+    $this->load->view('newAd');
   }
-  public function show_description(){
-  	$this->load->view('show_desc');
+  public function readMore(){
+  	$this->load->view('readMore');
   }
 }

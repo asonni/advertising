@@ -1,12 +1,12 @@
 <?php
 class Main_model extends CI_Model{
   public function getAllAds($pageSize,$currentPage){
-    $page = $currentPage - 1;
-    $skip = $pageSize * $page;
+    $currentPage -= 1;
+    $start = $pageSize * $currentPage;
     $this->db->select("id,ads_name,ads_description,ads_date");
     $this->db->from('posts');
     $this->db->order_by("ads_date", "desc");
-    $this->db->limit($pageSize,$skip);
+    $this->db->limit($pageSize,$start);
     $query = $this->db->get();
     return $query->result();
   }

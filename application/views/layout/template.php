@@ -13,14 +13,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="bower_components/bootstrap-rtl/dist/css/bootstrap-rtl.min.css">
     <link rel='stylesheet' href='bower_components/textAngular/dist/textAngular.css'>
-    <link rel="stylesheet" href="bower_components/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body>
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
           <div class="text-center">
-            <img src="bower_components/img/logo.png" alt="Responsive image" width="140">
+            <img src="assets/img/logo.png" alt="Responsive image" width="140">
             <h3>مصلحة الطيران المدني الليبي</h3>
           </div>
           <br>
@@ -34,7 +34,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <script src='bower_components/textAngular/dist/textAngular-rangy.min.js'></script>
     <script src='bower_components/textAngular/dist/textAngular-sanitize.min.js'></script>
     <script src='bower_components/textAngular/dist/textAngular.min.js'></script>
-    <script src="bower_components/js/ui-bootstrap/ui-bootstrap-tpls-1.2.5.min.js"></script>
-    <script src="bower_components/js/app.js"></script>
+    <script src="assets/js/ui-bootstrap/ui-bootstrap-tpls-1.2.5.min.js"></script>
+    <script src="assets/js/app.js"></script>
   </body>
 </html>
