@@ -48,7 +48,7 @@
           <td class="text-center">
             <a class="btn btn-primary btn-sm" ui-sref="readMoreHideAd({id:post.id})"><em class="fa fa-info fa-fw"></em>&nbsp;قراءة المزيد</a>
             <a class="btn btn-warning btn-sm" ui-sref="editHideAd({id:post.id})"><em class="fa fa-pencil"></em></a>
-            <a class="btn btn-info btn-sm" ng-click="showModel(post.id)"><em class="fa fa-eye"></em></a>
+            <a class="btn btn-info btn-sm" ng-click="showShowModel(post.id)"><em class="fa fa-eye"></em></a>
           </td>
         </tr> 
       </tbody> 

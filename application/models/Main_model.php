@@ -2,7 +2,8 @@
 class Main_model extends CI_Model{
   public function getCountAds(){
     $this->db->from('posts');
-    $this->db->where('ads_publishing',1,'status',1);
+    $this->db->where('ads_publishing',1);
+    $this->db->where('status',1);
     $query = $this->db->get();
     return $query->num_rows();
   }
@@ -11,7 +12,8 @@ class Main_model extends CI_Model{
     $start = $pageSize * $currentPage;
     $this->db->select("id,ads_name,ads_description,ads_date");
     $this->db->from('posts');
-    $this->db->where('ads_publishing',1,'status',1);
+    $this->db->where('ads_publishing',1);
+    $this->db->where('status',1);
     $this->db->order_by("ads_date","desc");
     $this->db->limit($pageSize,$start);
     $query = $this->db->get();
@@ -24,21 +26,25 @@ class Main_model extends CI_Model{
   public function getAdByID($id){
     $this->db->select("id,ads_name,ads_description,ads_date,ads_type_id,ads_publishing"); 
     $this->db->from('posts');   
-    $this->db->where('id',$id,'status',1);
+    $this->db->where('id',$id);
+    $this->db->where('status',1);
     $query = $this->db->get()->result();
     return $query;
   }
   public function getHiddenAdByID($id){
     $this->db->select("id,ads_name,ads_description,ads_date,ads_type_id,ads_publishing"); 
     $this->db->from('posts');   
-    $this->db->where('id',$id,'ads_publishing',0,'status',1);
+    $this->db->where('id',$id);
+    $this->db->where('ads_publishing',0);
+    $this->db->where('status',1);
     $query = $this->db->get()->result();
     return $query;
   }
   public function getDeletedAdByID($id){
     $this->db->select("id,ads_name,ads_description,ads_date,ads_type_id,ads_publishing"); 
     $this->db->from('posts');   
-    $this->db->where('id',$id,'status',0);
+    $this->db->where('id',$id);
+    $this->db->where('status',0);
     $query = $this->db->get()->result();
     return $query;
   }
