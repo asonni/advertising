@@ -20,4 +20,19 @@ class Home extends CI_Controller {
   public function editAd(){
     $this->load->view('editAd');
   }
+  public function deleteModel(){
+    $this->load->view('deleteModel');
+  }
+  public function hideModel(){
+    $this->load->view('hideModel');
+  }
+  public function showModel(){
+    $this->load->view('showModel');
+  }
+  public function adsHiddenList(){
+    $this->load->view('adsHiddenList');
+  }
+  public function adsDeletedList(){
+    $this->load->view('adsDeletedList');
+  }
 }

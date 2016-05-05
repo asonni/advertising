@@ -1,23 +1,23 @@
 <div class="panel panel-primary">
   <div class="panel-heading">
     <div class="row">
-      <div class="col-xs-12 col-lg-2">
+      <div class="col-xs-12 col-lg-3">
         <h3 class="panel-title">
-          <i class="fa fa-list fa-fw"></i>
-          &nbsp;عرض الاعلانات
+          <i class="fa fa-trash fa-fw"></i>
+          &nbsp;عرض الاعلانات المحذوفة
         </h3>
       </div>
-      <div class="col-xs-9 col-lg-5 no-padding">
+      <div class="col-xs-9 col-lg-4 no-padding">
         <div class="input-group">
-          <input type="text" class="form-control input-sm" ng-model="searchName" ng-change="searchByName()" placeholder="بحث..." style="line-height:25px;">
+          <input type="text" class="form-control input-sm" ng-model="searchDeletedName" ng-change="searchDeletedByName()" placeholder="بحث..." style="line-height:25px;">
           <div class="input-group-btn">
             <button class="btn btn-default btn-sm"><i class="glyphicon glyphicon-search"></i></button>
           </div>
         </div>
       </div>
-      <div class="col-xs-9 col-lg-5 form-inline text-left">
-        <a class="btn btn-info btn-sm" ui-sref="adsHideList"><em class="fa fa-eye-slash fa-fw"></em>&nbsp;الاعلانات المخفية</a>
-        <a class="btn btn-danger btn-sm" ui-sref="adsDeleteList"><em class="fa fa-pencil fa-fw"></em>&nbsp;الاعلانات المحذوفة</a>
+      <div class="col-xs-10 col-lg-5 form-inline text-left">
+        <a class="btn btn-warning btn-sm" ui-sref="adsList"><em class="fa fa-list fa-fw"></em>&nbsp;عرض الاعلانات</a>
+        <a class="btn btn-info btn-sm" ui-sref="adsHiddenList"><em class="fa fa-eye-slash fa-fw"></em>&nbsp;الاعلانات المخفية</a>
         <a class="btn btn-success btn-sm" ui-sref="newAd"><em class="fa fa-plus fa-fw"></em>&nbsp;اعلان جديد</a>
       </div>
     </div>
@@ -46,10 +46,7 @@
           <td>{{post.ads_name}}</td>
           <td class="text-center">{{post.ads_date}}</td> 
           <td class="text-center">
-            <a class="btn btn-primary btn-sm" ui-sref="readMore({id:post.id})"><em class="fa fa-info fa-fw"></em>&nbsp;قراءة المزيد</a>
-            <a class="btn btn-warning btn-sm" ui-sref="editAd({id:post.id})"><em class="fa fa-pencil"></em></a>
-            <a class="btn btn-danger btn-sm" ng-click="showDeleteModel(post.id)"><em class="fa fa-trash"></em></a>
-            <a class="btn btn-info btn-sm" ng-click="showHideModel(post.id)"><em class="fa fa-eye-slash"></em></a>
+            <a class="btn btn-primary btn-sm" ui-sref="readMoreDeleteAd({id:post.id})"><em class="fa fa-info fa-fw"></em>&nbsp;قراءة المزيد</a>
           </td>
         </tr> 
       </tbody> 
